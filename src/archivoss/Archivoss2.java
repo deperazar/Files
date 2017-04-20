@@ -11,31 +11,25 @@ package archivoss;
  */
 
 import java.io.*;
-import java.util.*;
-public class Archivoss {
+public class Archivoss2 {
 
     
     public static void main(String[] args) {
         File f= new File("ioi");
         if(!f.exists()){
             try{
-                f.createNewFile();
+            f.createNewFile();
             }
             catch(IOException ex){
                 System.out.println("No es posible crear el archivo");
             }
         }
-        try{
-            Scanner lectura=new Scanner (f);
-            while(lectura.hasNext()){
-                System.out.println(lectura.next());
-                
-            }
-            lectura.close();
-         }
-        catch(FileNotFoundException e){
-        }
-       
+            
+        System.out.println("exists returns "+f.exists());
+        System.out.println("canRead returns "+f.canRead());
+        System.out.println("length returns "+f.length());
+        System.out.println("get AbsolutePath returns "+f.getAbsolutePath());
+        
     }
     
 }
